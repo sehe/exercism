@@ -10,7 +10,6 @@ BOOST_AUTO_TEST_CASE(prints_the_hour)
     BOOST_REQUIRE_EQUAL("09:00", string(date_independent::clock::at(9)));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(prints_past_the_hour)
 {
     BOOST_REQUIRE_EQUAL("11:09", string(date_independent::clock::at(11, 9)));
@@ -81,4 +80,5 @@ BOOST_AUTO_TEST_CASE(wraps_around_midnight_backwards)
 
     BOOST_REQUIRE_EQUAL("23:59", string(clock));
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
