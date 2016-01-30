@@ -11,7 +11,6 @@ BOOST_AUTO_TEST_CASE(primes_up_to_10)
     BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(primes_up_to_1000)
 {
     const std::vector<int> expected{
@@ -34,4 +33,5 @@ BOOST_AUTO_TEST_CASE(primes_up_to_1000)
 
     BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
