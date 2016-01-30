@@ -7,7 +7,6 @@ BOOST_AUTO_TEST_CASE(b1_is_decimal_1)
     BOOST_REQUIRE_EQUAL(1, binary::convert("1"));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(b10_is_decimal_2)
 {
     BOOST_REQUIRE_EQUAL(2, binary::convert("10"));
@@ -47,4 +46,5 @@ BOOST_AUTO_TEST_CASE(x1100101b_is_decimal_0)
 {
     BOOST_REQUIRE_EQUAL(0, binary::convert("1100101b"));
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
