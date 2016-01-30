@@ -7,7 +7,11 @@ BOOST_AUTO_TEST_CASE(sum_to_1_yields_0)
     BOOST_REQUIRE_EQUAL(0, sum_of_multiples::to(0));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
+BOOST_AUTO_TEST_CASE(sum_to_20_yields_78)
+{
+    BOOST_REQUIRE_EQUAL(78, sum_of_multiples::to(20));
+}
+
 BOOST_AUTO_TEST_CASE(sum_to_4_yields_3)
 {
     BOOST_REQUIRE_EQUAL(3, sum_of_multiples::to(4));
@@ -37,4 +41,5 @@ BOOST_AUTO_TEST_CASE(sum_of_43_47_to_10000)
 {
     BOOST_REQUIRE_EQUAL(2203160, sum_of_multiples::to({43, 47}, 10000));
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
